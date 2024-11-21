@@ -1,5 +1,8 @@
 */*
 !/*.bat
 !/*/template.json
+!/*/template/
+!/*/template/**/
+!/*/template/**/*
 .gradle
 build
