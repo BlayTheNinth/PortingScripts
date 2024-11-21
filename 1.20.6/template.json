@@ -1,0 +1,25 @@
+{
+    "properties": {
+        "minecraft_version": "1.20.6",
+        "minecraft_versions": "1.20.6",
+        "minecraft_version_range": "[1.20.6,1.21)",
+        "pack_format_number": "18",
+        "java_version": "21",
+        "forge_version": "50.0.22",
+        "forge_version_range": "[50,)",
+        "forge_loader_version_range": "[50,)",
+        "neoforge_version": "20.6.70-beta",
+        "neoforge_version_range": "[20.6,)",
+        "neoforge_loader_version_range": "[1,)",
+        "fabric_version": "0.98.0+1.20.6",
+        "fabric_loader_version": "0.15.11",
+        "balm_version": "10.1.0-SNAPSHOT",
+        "balm_version_range": "[10.0.0,)",
+        "mod_author": "BlayTheNinth",
+        "credits": "BlayTheNinth"
+    },
+    "rename": {
+        "shared": "common",
+        "neoforge/src/main/resources/META-INF/mods.toml": "neoforge/src/main/resources/META-INF/neoforge.mods.toml"
+    }
+}

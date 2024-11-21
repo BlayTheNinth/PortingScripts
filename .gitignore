@@ -1,0 +1,5 @@
+*/*
+!/*.bat
+!/*/template.json
+.gradle
+build
