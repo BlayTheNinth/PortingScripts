@@ -27,6 +27,24 @@ function updateGradleProperties(template, destination) {
     console.log('gradle.properties updated successfully.');
 }
 
+function updateSettingsGradle(template, destination) {
+    const settingsGradlePath = path.join(destination, 'settings.gradle');
+    if (!fs.existsSync(settingsGradlePath)) {
+        console.log('settings.gradle file not found.');
+        return;
+    }
+
+    let settingsContent = fs.readFileSync(settingsGradlePath, 'utf-8');
+    const includeRegex = /include\([^)]*\)/g;
+    
+    if (template.loaders && Array.isArray(template.loaders)) {
+        const newIncludes = template.loaders.map(loader => `'${loader}'`).join(', ');
+        settingsContent = settingsContent.replace(includeRegex, `include(${newIncludes})`);
+        fs.writeFileSync(settingsGradlePath, settingsContent, 'utf-8');
+        console.log('settings.gradle updated successfully.');
+    }
+}
+
 function mergeProperties(gradleContent, templateProperties) {
     const lines = gradleContent.split('\n');
     const unusedProperties = { ...templateProperties };
@@ -85,6 +103,7 @@ function main() {
 
     // Update gradle.properties
     updateGradleProperties(template, destination);
+    updateSettingsGradle(template, destination);
     pushChanges(destination);
     // initializeGradle(destination);
 
