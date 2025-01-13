@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 
 function pushChanges(directory) {
     try {
+        execSync(`git -C ${directory} pull`, { stdio: 'inherit' });
         execSync(`git -C ${directory} add .`, { stdio: 'inherit' });
         execSync(`git -C ${directory} commit -m "chore: Bump dependencies"`, { stdio: 'inherit' });
         execSync(`git -C ${directory} push`, { stdio: 'inherit' });
