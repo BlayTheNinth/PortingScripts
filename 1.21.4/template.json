@@ -21,7 +21,7 @@
         "neoforge_loader_version_range": "[1,)",
         "fabric_version": "0.114.2+1.21.4",
         "fabric_loader_version": "0.16.10",
-        "balm_version": "21.4.6-SNAPSHOT",
+        "balm_version": "21.4.7-SNAPSHOT",
         "balm_version_range": "[21.4.0,)",
         "mod_author": "BlayTheNinth",
         "credits": "BlayTheNinth",
