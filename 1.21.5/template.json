@@ -1,0 +1,34 @@
+{
+    "loaders": [
+        "common",
+        "fabric"
+    ],
+    "properties": {
+        "minecraft_version": "1.21.5-pre1",
+        "minecraft_versions": "1.21.5-pre1",
+        "minecraft_version_range": "[1.21.5,)",
+		"kuma_version": "[21.5,21.6)",
+        "java_version": "21",
+        "forge_version": "54.0.16",
+        "forge_version_range": "[54,)",
+        "forge_loader_version_range": "[52,)",
+        "neoforge_version": "21.4.54-beta",
+        "neoforge_version_range": "[21,)",
+        "neoforge_loader_version_range": "[1,)",
+        "fabric_version": "0.118.6+1.21.5",
+        "fabric_loader_version": "0.16.10",
+        "balm_version": "21.5.1-SNAPSHOT",
+        "balm_version_range": "[21.5.0,)",
+        "mod_author": "BlayTheNinth",
+        "discord": "https://discord.gg/VAfZ2Nau6j",
+        "credits": "BlayTheNinth",
+        "neo_form_version": "1.21.5-pre1-20250311.214426",
+        "parchment_minecraft": "1.21.4",
+        "parchment_version": "2025.02.16"
+    },
+    "rename": {
+        "shared": "common",
+        "neoforge/src/main/resources/META-INF/mods.toml": "neoforge/src/main/resources/META-INF/neoforge.mods.toml",
+		".github/workflows/build.yml": ".github/workflows/build.yml.disabled"
+    }
+}
