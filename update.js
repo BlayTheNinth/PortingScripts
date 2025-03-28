@@ -3,9 +3,16 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 
-function pushChanges(directory) {
+function pullChanges(directory) {
     try {
         execSync(`git -C ${directory} pull`, { stdio: 'inherit' });
+    } catch (error) {
+        console.error(`Failed to pull changes: ${error.message}`);
+    }
+}
+
+function pushChanges(directory) {
+    try {
         execSync(`git -C ${directory} add .`, { stdio: 'inherit' });
         execSync(`git -C ${directory} commit -m "chore: Bump dependencies"`, { stdio: 'inherit' });
         execSync(`git -C ${directory} push`, { stdio: 'inherit' });
@@ -103,6 +110,7 @@ function main() {
     const template = JSON.parse(fs.readFileSync(templateJsonPath, 'utf-8'));
 
     // Update gradle.properties
+    pullChanges(destination);
     updateGradleProperties(template, destination);
     updateSettingsGradle(template, destination);
     pushChanges(destination);

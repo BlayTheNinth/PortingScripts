@@ -1,30 +1,35 @@
 {
     "loaders": [
         "common",
-        "fabric"
+        "fabric",
+        "forge",
+        "neoforge"
     ],
     "properties": {
-        "minecraft_version": "1.21.5-pre1",
-        "minecraft_versions": "1.21.5-pre1",
+        "minecraft_version": "1.21.5",
+        "minecraft_versions": "1.21.5",
         "minecraft_version_range": "[1.21.5,)",
 		"kuma_version": "[21.5,21.6)",
         "java_version": "21",
-        "forge_version": "54.0.16",
-        "forge_version_range": "[54,)",
-        "forge_loader_version_range": "[52,)",
-        "neoforge_version": "21.4.54-beta",
+        "forge_version": "55.0.3",
+        "forge_version_range": "[55,)",
+        "forge_loader_version_range": "[55,)",
+        "neoforge_version": "21.5.0-beta",
         "neoforge_version_range": "[21,)",
         "neoforge_loader_version_range": "[1,)",
-        "fabric_version": "0.118.6+1.21.5",
+        "fabric_version": "0.119.5+1.21.5",
         "fabric_loader_version": "0.16.10",
-        "balm_version": "21.5.1-SNAPSHOT",
+        "balm_version": "21.5.5-SNAPSHOT",
         "balm_version_range": "[21.5.0,)",
         "mod_author": "BlayTheNinth",
         "discord": "https://discord.gg/VAfZ2Nau6j",
         "credits": "BlayTheNinth",
-        "neo_form_version": "1.21.5-pre1-20250311.214426",
+        "neo_form_version": "1.21.5-20250325.162830",
         "parchment_minecraft": "1.21.4",
-        "parchment_version": "2025.02.16"
+        "parchment_version": "2025.02.16",
+        "pack_format_number": 71,
+        "maven_releases": "https://maven.twelveiterations.com/repository/maven-releases/",
+        "maven_snapshots": "https://maven.twelveiterations.com/repository/maven-snapshots/"
     },
     "rename": {
         "shared": "common",
